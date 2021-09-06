@@ -16,9 +16,9 @@ from telethon import events
 from telethon.tl.functions.channels import GetParticipantRequest
 from telethon.tl.types import ChannelParticipantAdmin, ChannelParticipantCreator
 
-from PerryBot import *
-from PerryBot.helpers.pasters import pasty
-from PerryBot.config import Config
+from userbot import *
+from userbot.helpers.pasters import pasty
+from userbot.config import Config
 
 
 # either edit or reply that msg
@@ -100,4 +100,4 @@ async def delete_hell(event, text, time=None, parse_mode=None, link_preview=None
     await asyncio.sleep(time)
     return await hellevent.delete()
 
-# PerryBot
+# userbot

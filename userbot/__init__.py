@@ -10,7 +10,7 @@ from telethon import TelegramClient
 from telethon.network.connection.tcpabridged import ConnectionTcpAbridged
 from telethon.sessions import StringSession
 
-from PerryBot.config import Config
+from userbot.config import Config
 
 
 StartTime = time.time()
@@ -33,7 +33,7 @@ LOGS = getLogger(__name__)
 if Config.HELLBOT_SESSION:
     session = StringSession(str(Config.HELLBOT_SESSION))
 else:
-    session = "PerryBot"
+    session = "userbot"
 
 
 try:
@@ -90,4 +90,4 @@ AFKREASON = None
 SUDO_LIST = {}
 
 
-# PerryBot
+# userbot

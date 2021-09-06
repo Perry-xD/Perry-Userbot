@@ -3,8 +3,8 @@ import re
 
 from telethon import events
 
-from PerryBot import bot
-from PerryBot.config import Config
+from userbot import bot
+from userbot.config import Config
 
 
 # forward check
@@ -90,4 +90,4 @@ def no_grp():
     return decorator
 
 
-# PerryBot
+# userbot

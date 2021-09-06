@@ -3,7 +3,7 @@ import requests
 
 from html_telegraph_poster import TelegraphPoster
 
-from PerryBot import *
+from userbot import *
 
 headers = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.104 Safari/537.36",
@@ -46,7 +46,7 @@ async def telegraph_paste(page_title, temxt):
     post_page = cl1ent.post(
         title=page_title,
         author=auth,
-        author_url="https://t.me/its_PerryBot",
+        author_url="https://t.me/its_userbot",
         text=temxt,
     )
     return post_page["url"]

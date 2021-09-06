@@ -16,16 +16,16 @@ from telethon import events
 from telethon.tl.functions.channels import GetParticipantRequest
 from telethon.tl.types import ChannelParticipantAdmin, ChannelParticipantCreator
 
-from PerryBot import *
-from PerryBot.helpers import *
-from PerryBot.config import *
-from PerryBot.utils import *
+from userbot import *
+from userbot.helpers import *
+from userbot.config import *
+from userbot.utils import *
 
 
 # ENV
 ENV = bool(os.environ.get("ENV", False))
 if ENV:
-    from PerryBot.config import Config
+    from userbot.config import Config
 else:
     if os.path.exists("Config.py"):
         from Config import Development as Config
@@ -36,19 +36,19 @@ def load_module(shortname):
     if shortname.startswith("__"):
         pass
     elif shortname.endswith("_"):
-        import PerryBot.utils
+        import userbot.utils
 
-        path = Path(f"PerryBot/plugins/{shortname}.py")
-        name = "PerryBot.plugins.{}".format(shortname)
+        path = Path(f"userbot/plugins/{shortname}.py")
+        name = "userbot.plugins.{}".format(shortname)
         spec = importlib.util.spec_from_file_location(name, path)
         mod = importlib.util.module_from_spec(spec)
         spec.loader.exec_module(mod)
         LOGS.info("HellBot - Successfully imported " + shortname)
     else:
-        import PerryBot.utils
+        import userbot.utils
 
-        path = Path(f"PerryBot/plugins/{shortname}.py")
-        name = "PerryBot.plugins.{}".format(shortname)
+        path = Path(f"userbot/plugins/{shortname}.py")
+        name = "userbot.plugins.{}".format(shortname)
         spec = importlib.util.spec_from_file_location(name, path)
         mod = importlib.util.module_from_spec(spec)
         mod.bot = Hell
@@ -59,10 +59,10 @@ def load_module(shortname):
         mod.command = command
         mod.logger = logging.getLogger(shortname)
         # support for uniborg
-        sys.modules["uniborg.util"] = PerryBot.utils
+        sys.modules["uniborg.util"] = userbot.utils
         mod.Config = Config
         mod.borg = Hell
-        mod.PerryBot = Hell
+        mod.userbot = Hell
         mod.edit_or_reply = edit_or_reply
         mod.eor = edit_or_reply
         mod.delete_hell = delete_hell
@@ -71,13 +71,13 @@ def load_module(shortname):
         mod.admin_cmd = hell_cmd
         mod.hell_cmd = hell_cmd
         # support for other userbots
-        sys.modules["userbot.utils"] = PerryBot.utils
-        sys.modules["userbot"] = PerryBot
+        sys.modules["userbot.utils"] = userbot.utils
+        sys.modules["userbot"] = userbot
         # support for paperplaneextended
-        sys.modules["userbot.events"] = PerryBot
+        sys.modules["userbot.events"] = userbot
         spec.loader.exec_module(mod)
         # for imports
-        sys.modules["PerryBot.plugins." + shortname] = mod
+        sys.modules["userbot.plugins." + shortname] = mod
         LOGS.info("⚡ Hêllẞø† ⚡ - Successfully Imported " + shortname)
 
 
@@ -90,7 +90,7 @@ def remove_plugin(shortname):
             del LOAD_PLUG[shortname]
 
         except BaseException:
-            name = f"PerryBot.plugins.{shortname}"
+            name = f"userbot.plugins.{shortname}"
 
             for i in reversed(range(len(bot._event_builders))):
                 ev, cb = bot._event_builders[i]
@@ -99,4 +99,4 @@ def remove_plugin(shortname):
     except BaseException:
         raise ValueError
 
-# PerryBot
+# userbot

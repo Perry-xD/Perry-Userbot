@@ -1,2 +1,2 @@
-from PerryBot.assistant import *
-from PerryBot.helpers import *
+from userbot.assistant import *
+from userbot.helpers import *

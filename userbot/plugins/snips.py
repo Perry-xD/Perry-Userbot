@@ -1,5 +1,5 @@
 from telethon import events
-from PerryBot.sql import snip_sql as sq
+from userbot.sql import snip_sql as sq
 from . import *
 
 lg_id = Config .LOGGER_ID

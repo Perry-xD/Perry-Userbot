@@ -14,7 +14,7 @@ from telethon.errors.rpcerrorlist import YouBlockedUserError
 from telethon.tl import functions
 from telethon.utils import get_input_document
 
-from PerryBot import LOGS, bot
+from userbot import LOGS, bot
 
 # generate thumbnail from audio...
 async def thumb_from_audio(audio_path, output):
@@ -151,4 +151,4 @@ async def unsave_stcr(hstcr):
         LOGS.info(e)
 
 
-# PerryBot
+# userbot

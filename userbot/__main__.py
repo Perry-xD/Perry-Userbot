@@ -7,10 +7,10 @@ import telethon.utils
 from telethon import TelegramClient
 from telethon.tl.functions.channels import InviteToChannelRequest, JoinChannelRequest
 
-from PerryBot import LOGS, bot, tbot
-from PerryBot.config import Config
-from PerryBot.utils import load_module
-from PerryBot.version import __hell__ as hellver
+from userbot import LOGS, bot, tbot
+from userbot.config import Config
+from userbot.utils import load_module
+from userbot.version import __hell__ as hellver
 hl = Config.HANDLER
 HELL_PIC = Config.ALIVE_PIC or "https://telegra.ph/file/ea9e11f7c9db21c1b8d5e.mp4"
 
@@ -25,7 +25,7 @@ async def hell_bot(bot_token):
         sys.exit()
 
 
-# PerryBot starter...
+# userbot starter...
 if len(sys.argv) not in (1, 3, 4):
     bot.disconnect()
 else:
@@ -47,7 +47,7 @@ else:
         sys.exit()
 
 # imports plugins...
-path = "PerryBot/plugins/*.py"
+path = "userbot/plugins/*.py"
 files = glob.glob(path)
 for name in files:
     with open(name) as f:
@@ -63,7 +63,7 @@ for name in files:
 #     except BaseException:
 #         pass
 #     LOGS.info("Installing Extra Plugins")
-#     path = "PerryBot/plugins/*.py"
+#     path = "userbot/plugins/*.py"
 #     files = glob.glob(path)
 #     for name in files:
 #         with open(name) as ex:
@@ -87,7 +87,7 @@ async def hell_is_on():
             await bot.send_file(
                 Config.LOGGER_ID,
                 HELL_PIC,
-                caption=f"#START \n\nDeployed Hêllẞø† Successfully\n\n**Hêllẞø† - {hellver}**\n\nType `{hl}ping` or `{hl}alive` to check! \n\nJoin [Hêllẞø† Channel](t.me/Its_HellBot) for Updates & [Hêllẞø† Chat](t.me/PerryBot_chat) for any query regarding Hêllẞø†",
+                caption=f"#START \n\nDeployed Hêllẞø† Successfully\n\n**Hêllẞø† - {hellver}**\n\nType `{hl}ping` or `{hl}alive` to check! \n\nJoin [Hêllẞø† Channel](t.me/Its_HellBot) for Updates & [Hêllẞø† Chat](t.me/userbot_chat) for any query regarding Hêllẞø†",
             )
     except Exception as e:
         LOGS.info(str(e))
@@ -113,4 +113,4 @@ else:
     bot.tgbot = None
     bot.run_until_disconnected()
 
-# PerryBot
+# userbot

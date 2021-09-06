@@ -1,6 +1,6 @@
 from telethon import events
 
-from PerryBot.sql.autopost_sql import add_post, get_all_post, is_post, remove_post
+from userbot.sql.autopost_sql import add_post, get_all_post, is_post, remove_post
 from . import *
 
 @bot.on(hell_cmd(pattern="autopost ?(.*)"))

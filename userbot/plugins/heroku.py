@@ -9,7 +9,7 @@ from os import execl
 from time import sleep
 from asyncio.exceptions import CancelledError
 
-from PerryBot.sql.gvar_sql import addgvar, delgvar, gvarstat
+from userbot.sql.gvar_sql import addgvar, delgvar, gvarstat
 from . import *
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
@@ -56,7 +56,7 @@ async def re(hell):
 @bot.on(sudo_cmd(pattern="reload$", allow_sudo=True))
 async def rel(event):
     await eor(event, "Reloading Hêllẞø†... Wait for few seconds...")
-    await reload_PerryBot()
+    await reload_userbot()
 
 
 @bot.on(hell_cmd(pattern="shutdown$"))

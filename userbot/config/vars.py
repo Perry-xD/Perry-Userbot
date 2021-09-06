@@ -9,4 +9,4 @@ else:
     from .hell_config import Config
 
 
-# PerryBot
+# userbot

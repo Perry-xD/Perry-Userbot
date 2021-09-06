@@ -1,7 +1,7 @@
 import re
 from telethon import events
 
-from PerryBot.sql import blacklist_sql as sq
+from userbot.sql import blacklist_sql as sq
 from . import *
 
 

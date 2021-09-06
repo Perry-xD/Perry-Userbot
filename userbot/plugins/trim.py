@@ -5,7 +5,7 @@ import datetime
 
 from . import *
 
-FF_MPEG_DOWN_LOAD_MEDIA_PATH = "./trim/PerryBot.media.ffmpeg"
+FF_MPEG_DOWN_LOAD_MEDIA_PATH = "./trim/userbot.media.ffmpeg"
 
 async def reply_id(event):
     reply_to_id = None

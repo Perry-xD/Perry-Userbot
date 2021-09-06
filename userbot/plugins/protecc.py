@@ -7,7 +7,7 @@ import requests
 from asyncio import sleep
 from bs4 import BeautifulSoup
 
-from PerryBot.sql.waifu_sql import is_harem, add_grp, rm_grp, get_all_grp
+from userbot.sql.waifu_sql import is_harem, add_grp, rm_grp, get_all_grp
 from . import *
 
 qt = "A qt waifu appeared!"

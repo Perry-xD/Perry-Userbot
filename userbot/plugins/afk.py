@@ -33,14 +33,14 @@ async def set_not_afk(event):
         total_afk_time = str((afk_end - afk_start))
     current_message = event.message.message
     if "#" not in current_message and "yes" in USER_AFK:  # pylint:disable=E0602
-        PerryBot = await event.client.send_message(
+        userbot = await event.client.send_message(
             event.chat_id,
             "__**Back to Virtual World!**__\nNo Longer AFK.\n⏱️ Was afk for: `"
             + total_afk_time
             + "`", file=hellpic
         )
         try:
-            await unsave_gif(event, PerryBot)
+            await unsave_gif(event, userbot)
         except:
             pass
         try:
@@ -61,7 +61,7 @@ async def set_not_afk(event):
                 silent=True,
             )
         await asyncio.sleep(5)
-        await PerryBot.delete()
+        await userbot.delete()
         USER_AFK = {}  # pylint:disable=E0602
         afk_time = None  # pylint:disable=E0602
 

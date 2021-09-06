@@ -3,7 +3,7 @@ import os
 
 from youtube_search import YoutubeSearch
 
-from PerryBot.utils.extras import delete_hell as eod
+from userbot.utils.extras import delete_hell as eod
 
 
 # Gets yt link of given query.

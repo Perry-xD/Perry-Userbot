@@ -6,7 +6,7 @@ import urllib3
 from git import Repo
 from git.exc import GitCommandError, InvalidGitRepositoryError, NoSuchPathError
 
-from PerryBot.helpers import runner
+from userbot.helpers import runner
 from . import *
 
 
@@ -94,7 +94,7 @@ async def update(event, repo, ups_rem, ac_br):
     await event.edit(
         "✅ Successfully updated Hêllẞø†!\n\nBot is restarting please wait for a minute."
     )
-    args = [sys.executable, "-m", "PerryBot"]
+    args = [sys.executable, "-m", "userbot"]
     os.execle(sys.executable, *args, os.environ)
     return
 

@@ -1,13 +1,13 @@
 import functools
 from telethon import events
-from PerryBot import *
+from userbot import *
 
 bothandler = Config.BOT_HANDLER
 
 
-def PerryBot_cmd(add_cmd, is_args=False):
+def userbot_cmd(add_cmd, is_args=False):
     def cmd(func):
-        PerryBot = bot.tgbot
+        userbot = bot.tgbot
         if is_args:
             pattern = bothandler + add_cmd + "(?: |$)(.*)"
         elif is_args == "simp":
@@ -18,7 +18,7 @@ def PerryBot_cmd(add_cmd, is_args=False):
             pattern = bothandler + add_cmd + " (\S+)"
         else:
             pattern = bothandler + add_cmd + "$"
-        PerryBot.add_event_handler(
+        userbot.add_event_handler(
             func, events.NewMessage(incoming=True, pattern=pattern)
         )
 
@@ -29,8 +29,8 @@ def is_admin():
     def decorator(func):
         @functools.wraps(func)
         async def wrapper(event):
-            PerryBot = bot.tgbot
-            perms = await PerryBot.get_permissions(event.chat_id, event.sender_id)
+            userbot = bot.tgbot
+            perms = await userbot.get_permissions(event.chat_id, event.sender_id)
             user = event.sender_id
             ForGo10 = bot.uid
             if perms.is_admin:
@@ -51,9 +51,9 @@ def is_bot_admin():
     def decorator(func):
         @functools.wraps(func)
         async def wrapper(event):
-            PerryBot = bot.tgbot
-            boat = await PerryBot.get_me()
-            perms = await PerryBot.get_permissions(event.chat_id, boat)
+            userbot = bot.tgbot
+            boat = await userbot.get_me()
+            perms = await userbot.get_permissions(event.chat_id, boat)
             if perms.is_admin:
                 await func(event)
             else:

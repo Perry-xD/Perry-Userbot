@@ -16,10 +16,10 @@ from telethon import events
 from telethon.tl.functions.channels import GetParticipantRequest
 from telethon.tl.types import ChannelParticipantAdmin, ChannelParticipantCreator
 
-from PerryBot import *
-from PerryBot.config import Config
-from PerryBot.helpers import *
-from PerryBot.utils import *
+from userbot import *
+from userbot.config import Config
+from userbot.helpers import *
+from userbot.utils import *
 
 async def reply_id(event):
     reply_to_id = None
@@ -111,4 +111,4 @@ def time_formatter(milliseconds: int) -> str:
     )
     return tmp[:-2]
 
-# PerryBot
+# userbot

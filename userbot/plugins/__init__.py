@@ -1,24 +1,24 @@
 import datetime
 import time
 
-from PerryBot import *
-from PerryBot.config import Config
-from PerryBot.helpers import *
-from PerryBot.utils import *
-from PerryBot.random_strings import *
-from PerryBot.version import __hell__
-from PerryBot.sql.gvar_sql import gvarstat
+from userbot import *
+from userbot.config import Config
+from userbot.helpers import *
+from userbot.utils import *
+from userbot.random_strings import *
+from userbot.version import __hell__
+from userbot.sql.gvar_sql import gvarstat
 from telethon import version
 
 
 HELL_USER = bot.me.first_name
 ForGo10God = bot.uid
 hell_mention = f"[{HELL_USER}](tg://user?id={ForGo10God})"
-hell_logo = "./PerryBot/resources/pics/PerryBot_logo.jpg"
-cjb = "./PerryBot/resources/pics/cjb.jpg"
-restlo = "./PerryBot/resources/pics/rest.jpeg"
-shuru = "./PerryBot/resources/pics/shuru.jpg"
-shhh = "./PerryBot/resources/pics/chup_madarchod.jpeg"
+hell_logo = "./userbot/resources/pics/userbot_logo.jpg"
+cjb = "./userbot/resources/pics/cjb.jpg"
+restlo = "./userbot/resources/pics/rest.jpeg"
+shuru = "./userbot/resources/pics/shuru.jpg"
+shhh = "./userbot/resources/pics/chup_madarchod.jpeg"
 hl = Config.HANDLER
 shl = Config.SUDO_HANDLER
 hell_ver = __hell__
@@ -51,7 +51,7 @@ if "@" in my_channel:
 if "@" in my_group:
     my_group = my_group.replace("@", "")
 
-chnl_link = "https://t.me/its_PerryBot"
+chnl_link = "https://t.me/its_userbot"
 hell_channel = f"[†hê Hêllẞø†]({chnl_link})"
 grp_link = "https://t.me/HellBot_Chat"
 hell_grp = f"[Hêllẞø† Group]({grp_link})"
@@ -73,4 +73,4 @@ WELCOME_FORMAT = """**Use these fomats in your welcome note to make them attract
 """
 # will add more soon
 
-# PerryBot
+# userbot
