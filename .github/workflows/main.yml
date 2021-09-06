@@ -18,7 +18,7 @@ jobs:
 
         with:
 
-          find: "perrybot"
+          find: "PerryBot"
 
           replace: "userbot"
 
