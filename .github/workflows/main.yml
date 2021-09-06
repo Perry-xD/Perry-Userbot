@@ -18,9 +18,9 @@ jobs:
 
         with:
 
-          find: "hellbot"
+          find: "perrybot"
 
-          replace: "PerryBot"
+          replace: "userbot"
 
       - name: Pull All Updates
 
