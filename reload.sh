@@ -1,3 +1,3 @@
 #!/bin/bash
 
-python3 -m hellbot
+python3 -m PerryBot

@@ -23,7 +23,7 @@ async def _(event):
     fole = "HELLBOT.jpg"
     await bot.send_file(event.chat_id, fole, caption=captin)
     await event.delete()
-    os.system("rm /root/hellbot/HELLBOT.jpg ")
+    os.system("rm /root/PerryBot/HELLBOT.jpg ")
 
 
 @bot.on(hell_cmd(pattern="fake ?(.*)"))

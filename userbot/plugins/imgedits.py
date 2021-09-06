@@ -6,8 +6,8 @@ import sys
 import os
 from . import *
 
-if not os.path.isdir("./hellbot/"):
-    os.makedirs("./hellbot/")
+if not os.path.isdir("./PerryBot/"):
+    os.makedirs("./PerryBot/")
 
 
 @bot.on(hell_cmd(pattern=r"feye$"))

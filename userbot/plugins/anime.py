@@ -100,7 +100,7 @@ async def canon(event):
         paste = await telegraph_paste(f"📃 Fillers List For “ {list_[0]} ”", msg)
         await nub.edit(f"**📃 Filler Episode List For [“ {list_[0]} ”]({paste}) !!**")
         return
-    hellbot = f"**📃 Filler Episode Lists :** \n\n"
+    PerryBot = f"**📃 Filler Episode Lists :** \n\n"
     for i in list_:
         result = parse_filler(hel_.get(i))
         msg = ""
@@ -114,8 +114,8 @@ async def canon(event):
             msg += "\n\n<b>Anime Canon episodes :</b>\n"
             msg += f'<code>{str(result.get("ac_ep"))}</code>'
         paste = await telegraph_paste(f"📃 Fillers List For “ {i} ”", msg)
-        hellbot += f"• [{i}]({paste})\n"
-    await nub.edit(hellbot)
+        PerryBot += f"• [{i}]({paste})\n"
+    await nub.edit(PerryBot)
 
 
 @bot.on(hell_cmd(pattern="airing ?(.*)"))

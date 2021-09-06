@@ -1,2 +1,2 @@
-from hellbot.assistant import *
-from hellbot.helpers import *
+from PerryBot.assistant import *
+from PerryBot.helpers import *

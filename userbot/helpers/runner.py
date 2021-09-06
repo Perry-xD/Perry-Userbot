@@ -34,11 +34,11 @@ def run_sync(func, *args, **kwargs):
 def run_async(loop, coro):
     return asyncio.run_coroutine_threadsafe(coro, loop).result()
 
-async def reload_hellbot():
+async def reload_PerryBot():
     executable = sys.executable.replace(" ", "\\ ")
-    args = [executable, "-m", "hellbot"]
+    args = [executable, "-m", "PerryBot"]
     os.execle(executable, *args, os.environ)
     os._exit(143)
 
 
-# hellbot
+# PerryBot

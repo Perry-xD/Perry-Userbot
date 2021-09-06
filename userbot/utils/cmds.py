@@ -1,6 +1,6 @@
 import os
-from hellbot import CMD_HELP, CMD_HELP_BOT
-from hellbot.config import Config
+from PerryBot import CMD_HELP, CMD_HELP_BOT
+from PerryBot.config import Config
 
 HANDLER = Config.HANDLER
 
@@ -105,4 +105,4 @@ class CmdHelp:
         elif text == "USERNAMES":
             return "<user name (s)>"
 
-# hellbot
+# PerryBot

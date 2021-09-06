@@ -17,9 +17,9 @@ from telethon import events
 from telethon.tl.functions.channels import GetParticipantRequest
 from telethon.tl.types import ChannelParticipantAdmin, ChannelParticipantCreator
 
-from hellbot import *
-from hellbot.helpers import *
-from hellbot.config import Config
+from PerryBot import *
+from PerryBot.helpers import *
+from PerryBot.config import Config
 
 
 # just a small shit for big works
@@ -45,4 +45,4 @@ async def is_admin(client, chat_id, user_id):
     else:
         return False
 
-# hellbot
+# PerryBot

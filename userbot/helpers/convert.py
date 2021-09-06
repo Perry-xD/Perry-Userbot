@@ -113,7 +113,7 @@ async def take_ss(
 
 
 def tgs_to_gif(sticker_path: str, quality: int = 256) -> str:                  
-    semx = os.path.join(dwlpath, "hellbottgs.gif")
+    semx = os.path.join(dwlpath, "PerryBottgs.gif")
     with open(semx, 'wb') as t_g:
         lottie.exporters.gif.export_gif(lottie.parsers.tgs.parse_tgs(sticker_path), t_g, quality, 1)
     os.remove(sticker_path)
@@ -165,4 +165,4 @@ async def get_time(seconds: int) -> str:
     return up_time
 
 
-# hellbot
+# PerryBot

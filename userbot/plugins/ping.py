@@ -23,4 +23,4 @@ CmdHelp("ping").add_command(
   "✅ Harmless Module"
 ).add()
 
-# hellbot
+# PerryBot

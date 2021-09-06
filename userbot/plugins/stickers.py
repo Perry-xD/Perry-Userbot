@@ -16,7 +16,7 @@ from telethon.tl.functions.messages import GetStickerSetRequest
 from telethon.tl.types import DocumentAttributeFilename, DocumentAttributeSticker, InputStickerSetID, MessageMediaPhoto, InputMessagesFilterDocument
 from telethon.utils import get_input_document
 
-from hellbot.sql.gvar_sql import addgvar, gvarstat, delgvar
+from PerryBot.sql.gvar_sql import addgvar, gvarstat, delgvar
 from . import *
 
 KANGING_STR = [
@@ -34,7 +34,7 @@ KANGING_STR = [
     "Turn around, Go straight and f*ck off...",
 ]
 
-hellbot = Config.STICKER_PACKNAME
+PerryBot = Config.STICKER_PACKNAME
 
 
 @bot.on(hell_cmd(outgoing=True, pattern="kang"))
@@ -103,8 +103,8 @@ async def kang(args):
 
         packname = f"Hellbot_{un_}_{pack}"
         packnick = (
-            f"{hellbot} Vol.{pack}"
-            if hellbot
+            f"{PerryBot} Vol.{pack}"
+            if PerryBot
             else f"{un}'s Hêllẞø† Vol.{pack}"
         )
         cmd = "/newpack"
@@ -139,8 +139,8 @@ async def kang(args):
                     pack += 1
                     packname = f"HellBot_{un_}_pack_{pack}"
                     packnick = (
-                        f"{hellbot} Vol.{pack}"
-                        if hellbot
+                        f"{PerryBot} Vol.{pack}"
+                        if PerryBot
                         else f"{un}'s Hêllẞø† Vol.{pack}"
                     )
                     await hell.edit(

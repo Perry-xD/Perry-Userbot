@@ -24,8 +24,8 @@ async def _(event):
     await event.get_reply_message()
     img = await convert_to_image(event, bot)
     imagePath = img
-    maskPath = "./hellbot/resources/pics/mask (1).png"
-    cascPath = "./hellbot/resources/xmls/haarcascade_frontalface_default.xml"
+    maskPath = "./PerryBot/resources/pics/mask (1).png"
+    cascPath = "./PerryBot/resources/xmls/haarcascade_frontalface_default.xml"
     faceCascade = cv2.CascadeClassifier(cascPath)
     image = cv2.imread(imagePath)
     gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)

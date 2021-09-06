@@ -16,7 +16,7 @@ from telethon.tl.functions.channels import GetParticipantRequest
 from telethon.tl.functions.channels import JoinChannelRequest
 from telethon.tl.functions.messages import ExportChatInviteRequest
 
-from hellbot.sql.gvar_sql import gvarstat
+from PerryBot.sql.gvar_sql import gvarstat
 from . import *
 
 hell_row = Config.BUTTONS_IN_HELP
@@ -98,7 +98,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
         builder = event.builder
         result = None
         query = event.text
-        if event.query.user_id == bot.uid and query == "hellbot_help":
+        if event.query.user_id == bot.uid and query == "PerryBot_help":
             rev_text = query[::-1]
             veriler = button(0, sorted(CMD_HELP))
             apn = []
@@ -216,7 +216,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
                 text=f"**⚡ ʟɛɢɛռɖaʀʏ ᴀғ ɦɛʟʟɮօt ⚡**",
                 buttons=[
                     [Button.url("📑 Repo 📑", "https://github.com/The-HellBot/HellBot")],
-                    [Button.url("🚀 Deploy 🚀", "https://dashboard.heroku.com/new?button-url=https%3A%2F%2Fgithub.com%2FThe-HellBot%2FHellBot&template=https%3A%2F%2Fgithub.com%2Fthe-hellbot%2Fhellbot")],
+                    [Button.url("🚀 Deploy 🚀", "https://dashboard.heroku.com/new?button-url=https%3A%2F%2Fgithub.com%2FThe-HellBot%2FHellBot&template=https%3A%2F%2Fgithub.com%2Fthe-PerryBot%2FPerryBot")],
                 ],
             )
 
@@ -232,12 +232,12 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
         else:
             result = builder.article(
                 "@Its_HellBot",
-                text="""**Hey! This is [Hêllẞø†](https://t.me/its_hellbot) \nYou can know more about me from the links given below 👇**""",
+                text="""**Hey! This is [Hêllẞø†](https://t.me/its_PerryBot) \nYou can know more about me from the links given below 👇**""",
                 buttons=[
                     [
                         custom.Button.url("🔥 CHANNEL 🔥", "https://t.me/Its_HellBot"),
                         custom.Button.url(
-                            "⚡ GROUP ⚡", "https://t.me/hellbot_chat"
+                            "⚡ GROUP ⚡", "https://t.me/PerryBot_chat"
                         ),
                     ],
                     [
@@ -468,4 +468,4 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
             )
 
 
-# hellbot
+# PerryBot

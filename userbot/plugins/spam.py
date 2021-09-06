@@ -29,13 +29,13 @@ async def spammer(e):
 async def bigspam(hell):
     if not hell.text[0].isalpha() and hell.text[0] not in ("/", "#", "@", "!"):
         hell_msg = hell.text
-        hellbot_count = int(hell_msg[9:13])
+        PerryBot_count = int(hell_msg[9:13])
         reply_msg = await hell.get_reply_message()
         if reply_msg:
             hell_spam = reply_msg
         else:
             hell_spam = str(hell.text[13:])
-        for i in range(1, hellbot_count):
+        for i in range(1, PerryBot_count):
             await hell.respond(hell_spam)
         await hell.delete()
         await hell.client.send_message(
@@ -140,7 +140,7 @@ CmdHelp("spam").add_command(
 ).add_command(
   "bspam", "<count> <text or reply>", "Spams the message X times without floodwait. Breaks the spam count to avoid floodwait.", "bspam 9999 Hello"
 ).add_command(
-  "bigspam", "<count> <text>", "Sends the text 'X' number of times. This what hellbot iz known for. The Best BigSpam Ever", "bigspam 5000 Hello"
+  "bigspam", "<count> <text>", "Sends the text 'X' number of times. This what PerryBot iz known for. The Best BigSpam Ever", "bigspam 5000 Hello"
 ).add_info(
   "Spammers Commands"
 ).add_warning(

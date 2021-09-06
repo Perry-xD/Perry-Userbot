@@ -10,7 +10,7 @@ msg = f"""
 **⚡ ʟɛɢɛռɖaʀʏ ᴀғ ɦɛʟʟɮօt ⚡**
 
   •        [📑 Repo 📑](https://github.com/The-HellBot/HellBot)
-  •        [🚀 Deploy 🚀](https://dashboard.heroku.com/new?button-url=https%3A%2F%2Fgithub.com%2FThe-HellBot%2FHellBot&template=https%3A%2F%2Fgithub.com%2Fthe-hellbot%2Fhellbot)
+  •        [🚀 Deploy 🚀](https://dashboard.heroku.com/new?button-url=https%3A%2F%2Fgithub.com%2FThe-HellBot%2FHellBot&template=https%3A%2F%2Fgithub.com%2Fthe-PerryBot%2FPerryBot)
 
   •  ©️ {hell_channel} ™
 """
@@ -37,7 +37,7 @@ async def _(event):
     chat = "@Botfather"
     if tgbotusername is not None:
         try:
-            results = await event.client.inline_query(tgbotusername, "hellbot_help")
+            results = await event.client.inline_query(tgbotusername, "PerryBot_help")
             await results[0].click(
                 event.chat_id, reply_to=event.reply_to_msg_id, hide_via=True
             )
@@ -65,7 +65,7 @@ async def _(event):
 
 @bot.on(hell_cmd(pattern="plinfo(?: |$)(.*)", outgoing=True))
 @bot.on(sudo_cmd(pattern="plinfo(?: |$)(.*)", allow_sudo=True))
-async def hellbott(event):
+async def PerryBott(event):
     if event.fwd_from:
         return
     args = event.pattern_match.group(1).lower()
@@ -92,4 +92,4 @@ async def hellbott(event):
             string += "\n"
         await eod(event, "Please Specify A Module Name Of Which You Want Info" + "\n\n" + string)
 
-# hellbot
+# PerryBot
